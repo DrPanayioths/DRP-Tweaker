@@ -121,7 +121,7 @@ namespace DrpFixer
             string url = "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi";
             string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             downfolder = Path.Combine(downfolder, "Downloads");
-            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            string downloadPath = Path.Combine(downfolder, "EpicGames-Setup.exe");
             client.DownloadFile(url, downloadPath);
         }
             private void Steam_Clicker(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace DrpFixer
             string url = "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe";
             string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             downfolder = Path.Combine(downfolder, "Downloads");
-            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            string downloadPath = Path.Combine(downfolder, "Steam-Setup.exe");
             client.DownloadFile(url, downloadPath);
         }
         private void EA_Clicker(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace DrpFixer
             string url = "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe";
             string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             downfolder = Path.Combine(downfolder, "Downloads");
-            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            string downloadPath = Path.Combine(downfolder, "EA-Setup.exe");
             client.DownloadFile(url, downloadPath);
         }
         private void Lunar_Clicke(object sender, EventArgs e)
@@ -148,9 +148,9 @@ namespace DrpFixer
             string url = "https://launcherupdates.lunarclientcdn.com/Lunar%20Client%20v3.2.0.exe";
             string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             downfolder = Path.Combine(downfolder, "Downloads");
-            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            string downloadPath = Path.Combine(downfolder, "LunarClient-Setup.exe");
             client.DownloadFile(url, downloadPath);
-            
+
         }
     }
 }
