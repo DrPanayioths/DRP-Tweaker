@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Net;
+using System.Security.Policy;
 
 namespace DrpFixer
 {
@@ -6,15 +9,17 @@ namespace DrpFixer
     {
         private System.Windows.Forms.Button Epicg;
         private System.Windows.Forms.Button Steam;
-        private System.Windows.Forms.Button Origin;
         private System.Windows.Forms.Button EA;
+        private System.Windows.Forms.Button Lunar;
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Epicg = new System.Windows.Forms.Button();
             this.Steam = new System.Windows.Forms.Button();
-            this.Origin = new System.Windows.Forms.Button();
             this.EA = new System.Windows.Forms.Button();
+            this.Lunar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // Epicg
@@ -43,31 +48,33 @@ namespace DrpFixer
             this.Steam.UseVisualStyleBackColor = true;
             this.Steam.Click += new System.EventHandler(this.Steam_Clicker);
             // 
-            // Origin
-            // 
-            this.Origin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Origin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Origin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Origin.Location = new System.Drawing.Point(238, 387);
-            this.Origin.Name = "Origin";
-            this.Origin.Size = new System.Drawing.Size(107, 41);
-            this.Origin.TabIndex = 2;
-            this.Origin.Text = "Origin";
-            this.Origin.UseVisualStyleBackColor = true;
-            this.Origin.Click += new System.EventHandler(this.Origin_Clicker);
-            // 
             // EA
             // 
             this.EA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EA.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.EA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EA.Location = new System.Drawing.Point(351, 387);
+            this.EA.Location = new System.Drawing.Point(238, 387);
             this.EA.Name = "EA";
             this.EA.Size = new System.Drawing.Size(107, 41);
-            this.EA.TabIndex = 3;
-            this.EA.Text = "EA";
+            this.EA.TabIndex = 2;
+            this.EA.Text = "EA Client";
+            this.toolTip1.SetToolTip(this.EA, "By Electronic Arts");
             this.EA.UseVisualStyleBackColor = true;
-            this.EA.Click += new System.EventHandler(this.ea_Clicke);
+            this.EA.Click += new System.EventHandler(this.EA_Clicker);
+            // 
+            // Lunar
+            // 
+            this.Lunar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Lunar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Lunar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Lunar.Location = new System.Drawing.Point(351, 387);
+            this.Lunar.Name = "Lunar";
+            this.Lunar.Size = new System.Drawing.Size(107, 41);
+            this.Lunar.TabIndex = 3;
+            this.Lunar.Text = "Lunar Client";
+            this.toolTip1.SetToolTip(this.Lunar, "By MoonsWorth");
+            this.Lunar.UseVisualStyleBackColor = true;
+            this.Lunar.Click += new System.EventHandler(this.Lunar_Clicke);
             // 
             // drpdownloader
             // 
@@ -75,8 +82,8 @@ namespace DrpFixer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Lunar);
             this.Controls.Add(this.EA);
-            this.Controls.Add(this.Origin);
             this.Controls.Add(this.Steam);
             this.Controls.Add(this.Epicg);
             this.Name = "drpdownloader";
@@ -90,23 +97,42 @@ namespace DrpFixer
 
         private void Epic_Click(object sender, EventArgs e)
         {
-
+            WebClient client = new WebClient();
+            string url = "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            client.DownloadFile(url, downloadPath);
         }
-        private void Steam_Clicker(object sender, EventArgs e)
+            private void Steam_Clicker(object sender, EventArgs e)
         {
-
+            WebClient client = new WebClient();
+            string url = "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            client.DownloadFile(url, downloadPath);
         }
-        private void Origin_Clicker(object sender, EventArgs e)
+        private void EA_Clicker(object sender, EventArgs e)
         {
-
+            WebClient client = new WebClient();
+            string url = "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            client.DownloadFile(url, downloadPath);
         }
-        private void ea_Clicke(object sender, EventArgs e)
+        private void Lunar_Clicke(object sender, EventArgs e)
         {
-
+            WebClient client = new WebClient();
+            string url = "https://launcherupdates.lunarclientcdn.com/Lunar%20Client%20v3.2.0.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadPath = Path.Combine(downfolder, "Lunar Client v3.2.0.exe");
+            client.DownloadFile(url, downloadPath);
+            
         }
-
-
-
-
+        private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
