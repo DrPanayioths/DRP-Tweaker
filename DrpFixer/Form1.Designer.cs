@@ -11,6 +11,9 @@ namespace DrpFixer
         private System.Windows.Forms.Button Steam;
         private System.Windows.Forms.Button EA;
         private System.Windows.Forms.Button Lunar;
+        private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.Label TheCreator;
+        private System.Windows.Forms.ToolTip TipHoverare;
 
         private void InitializeComponent()
         {
@@ -19,7 +22,8 @@ namespace DrpFixer
             this.Steam = new System.Windows.Forms.Button();
             this.EA = new System.Windows.Forms.Button();
             this.Lunar = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.TheCreator = new System.Windows.Forms.Label();
+            this.TipHoverare = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // Epicg
@@ -58,7 +62,7 @@ namespace DrpFixer
             this.EA.Size = new System.Drawing.Size(107, 41);
             this.EA.TabIndex = 2;
             this.EA.Text = "EA Client";
-            this.toolTip1.SetToolTip(this.EA, "By Electronic Arts");
+            this.TipHoverare.SetToolTip(this.EA, "By Electronic Arts");
             this.EA.UseVisualStyleBackColor = true;
             this.EA.Click += new System.EventHandler(this.EA_Clicker);
             // 
@@ -72,9 +76,22 @@ namespace DrpFixer
             this.Lunar.Size = new System.Drawing.Size(107, 41);
             this.Lunar.TabIndex = 3;
             this.Lunar.Text = "Lunar Client";
-            this.toolTip1.SetToolTip(this.Lunar, "By MoonsWorth");
+            this.TipHoverare.SetToolTip(this.Lunar, "By MoonsWorth");
             this.Lunar.UseVisualStyleBackColor = true;
             this.Lunar.Click += new System.EventHandler(this.Lunar_Clicke);
+            // 
+            // TheCreator
+            // 
+            this.TheCreator.AutoSize = true;
+            this.TheCreator.Font = new System.Drawing.Font("Noto Sans Cond", 8F, System.Drawing.FontStyle.Bold);
+            this.TheCreator.ForeColor = System.Drawing.Color.Silver;
+            this.TheCreator.Location = new System.Drawing.Point(678, 437);
+            this.TheCreator.Name = "TheCreator";
+            this.TheCreator.Size = new System.Drawing.Size(127, 15);
+            this.TheCreator.TabIndex = 4;
+            this.TheCreator.Text = "Provided By DrPanayioths";
+            this.TheCreator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TheCreator.Click += new System.EventHandler(this.TheCreator_Click);
             // 
             // drpdownloader
             // 
@@ -82,16 +99,19 @@ namespace DrpFixer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TheCreator);
             this.Controls.Add(this.Lunar);
             this.Controls.Add(this.EA);
             this.Controls.Add(this.Steam);
             this.Controls.Add(this.Epicg);
             this.Name = "drpdownloader";
+            this.Opacity = 0.7D;
             this.ShowIcon = false;
             this.Text = "DRP Downloader (Provided By DrPanayioths)";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.drpdownloader_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,7 +152,5 @@ namespace DrpFixer
             client.DownloadFile(url, downloadPath);
             
         }
-        private System.ComponentModel.IContainer components;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
