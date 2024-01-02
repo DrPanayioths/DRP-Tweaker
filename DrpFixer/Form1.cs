@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DrpFixer
 {
-    public partial class Form1 : Form
+    public partial class drpdownloader : Form
     {
-        public Form1()
+        public drpdownloader()
         {
             InitializeComponent();
+        }
+
+        private void drpdownloader_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
