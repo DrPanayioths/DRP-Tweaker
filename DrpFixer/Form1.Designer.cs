@@ -115,6 +115,13 @@ namespace DrpFixer
 
         }
 
+
+
+
+
+
+
+
         private void Epic_Click(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
@@ -124,6 +131,11 @@ namespace DrpFixer
             string downloadPath = Path.Combine(downfolder, "EpicGames-Setup.exe");
             client.DownloadFile(url, downloadPath);
         }
+
+
+
+
+
             private void Steam_Clicker(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
@@ -133,6 +145,9 @@ namespace DrpFixer
             string downloadPath = Path.Combine(downfolder, "Steam-Setup.exe");
             client.DownloadFile(url, downloadPath);
         }
+
+
+
         private void EA_Clicker(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
@@ -142,6 +157,9 @@ namespace DrpFixer
             string downloadPath = Path.Combine(downfolder, "EA-Setup.exe");
             client.DownloadFile(url, downloadPath);
         }
+
+
+
         private void Lunar_Clicke(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
