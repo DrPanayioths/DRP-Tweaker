@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,8 +13,11 @@ namespace DrpFixer
 {
     public partial class drpdownloader : Form
     {
+
+
         public drpdownloader()
         {
+
             InitializeComponent();
         }
 
@@ -21,10 +25,20 @@ namespace DrpFixer
         {
 
         }
-
         private void TheCreator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void TipHoverare_Popup(object sender, PopupEventArgs e)
         {
 
         }
     }
 }
+
