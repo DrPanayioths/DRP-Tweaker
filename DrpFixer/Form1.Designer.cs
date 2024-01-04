@@ -16,6 +16,14 @@ namespace DrpFixer
         private System.Windows.Forms.Label TheCreator;
         private System.Windows.Forms.ToolTip TipHoverare;
         private System.Windows.Forms.ToolTip RedTip;
+        private System.Windows.Forms.Label browsers;
+        private System.Windows.Forms.Label launchers;
+        private System.Windows.Forms.Button Ghostery;
+        private System.Windows.Forms.Button Brave;
+        private System.Windows.Forms.Button Chrome;
+        private System.Windows.Forms.Button duckduckgob;
+        private System.Windows.Forms.Label Utilitys;
+        private System.Windows.Forms.Button Discorda;
 
         private void InitializeComponent()
         {
@@ -26,12 +34,15 @@ namespace DrpFixer
             this.Lunar = new System.Windows.Forms.Button();
             this.TheCreator = new System.Windows.Forms.Label();
             this.TipHoverare = new System.Windows.Forms.ToolTip(this.components);
-            this.RedTip = new System.Windows.Forms.ToolTip(this.components);
             this.Ghostery = new System.Windows.Forms.Button();
+            this.RedTip = new System.Windows.Forms.ToolTip(this.components);
+            this.Chrome = new System.Windows.Forms.Button();
             this.browsers = new System.Windows.Forms.Label();
             this.launchers = new System.Windows.Forms.Label();
             this.Brave = new System.Windows.Forms.Button();
-            this.Chrome = new System.Windows.Forms.Button();
+            this.duckduckgob = new System.Windows.Forms.Button();
+            this.Utilitys = new System.Windows.Forms.Label();
+            this.Discorda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -126,9 +137,25 @@ namespace DrpFixer
             this.Ghostery.Size = new System.Drawing.Size(107, 41);
             this.Ghostery.TabIndex = 9;
             this.Ghostery.Text = "Ghostery";
-            this.TipHoverare.SetToolTip(this.Ghostery, "By Electronic Arts");
             this.Ghostery.UseVisualStyleBackColor = true;
             this.Ghostery.Click += new System.EventHandler(this.ghostery_click);
+            // 
+            // Chrome
+            // 
+            this.Chrome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Chrome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Chrome.FlatAppearance.BorderSize = 2;
+            this.Chrome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Chrome.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chrome.ForeColor = System.Drawing.Color.DarkCyan;
+            this.Chrome.Location = new System.Drawing.Point(12, 48);
+            this.Chrome.Name = "Chrome";
+            this.Chrome.Size = new System.Drawing.Size(107, 41);
+            this.Chrome.TabIndex = 7;
+            this.Chrome.Text = "Chrome";
+            this.RedTip.SetToolTip(this.Chrome, "No Privacy");
+            this.Chrome.UseVisualStyleBackColor = true;
+            this.Chrome.Click += new System.EventHandler(this.Chrome_click);
             // 
             // browsers
             // 
@@ -169,22 +196,48 @@ namespace DrpFixer
             this.Brave.UseVisualStyleBackColor = true;
             this.Brave.Click += new System.EventHandler(this.Brave_Click);
             // 
-            // Chrome
+            // duckduckgob
             // 
-            this.Chrome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Chrome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Chrome.FlatAppearance.BorderSize = 2;
-            this.Chrome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Chrome.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chrome.ForeColor = System.Drawing.Color.DarkCyan;
-            this.Chrome.Location = new System.Drawing.Point(12, 48);
-            this.Chrome.Name = "Chrome";
-            this.Chrome.Size = new System.Drawing.Size(107, 41);
-            this.RedTip.SetToolTip(this.Chrome, "No Privacy");
-            this.Chrome.TabIndex = 7;
-            this.Chrome.Text = "Chrome";
-            this.Chrome.UseVisualStyleBackColor = true;
-            this.Chrome.Click += new System.EventHandler(this.Chrome_click);
+            this.duckduckgob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.duckduckgob.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.duckduckgob.FlatAppearance.BorderSize = 2;
+            this.duckduckgob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.duckduckgob.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duckduckgob.ForeColor = System.Drawing.Color.DarkCyan;
+            this.duckduckgob.Location = new System.Drawing.Point(351, 48);
+            this.duckduckgob.Name = "duckduckgob";
+            this.duckduckgob.Size = new System.Drawing.Size(107, 41);
+            this.duckduckgob.TabIndex = 10;
+            this.duckduckgob.Text = "DuckDuckGO";
+            this.duckduckgob.UseVisualStyleBackColor = true;
+            this.duckduckgob.Click += new System.EventHandler(this.duck_click);
+            // 
+            // Utilitys
+            // 
+            this.Utilitys.AutoSize = true;
+            this.Utilitys.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Utilitys.ForeColor = System.Drawing.Color.Black;
+            this.Utilitys.Location = new System.Drawing.Point(7, 267);
+            this.Utilitys.Name = "Utilitys";
+            this.Utilitys.Size = new System.Drawing.Size(69, 27);
+            this.Utilitys.TabIndex = 11;
+            this.Utilitys.Text = "Utilities:";
+            // 
+            // Discorda
+            // 
+            this.Discorda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Discorda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Discorda.FlatAppearance.BorderSize = 2;
+            this.Discorda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Discorda.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discorda.ForeColor = System.Drawing.Color.DarkCyan;
+            this.Discorda.Location = new System.Drawing.Point(12, 297);
+            this.Discorda.Name = "Discorda";
+            this.Discorda.Size = new System.Drawing.Size(107, 41);
+            this.Discorda.TabIndex = 12;
+            this.Discorda.Text = "Discord";
+            this.Discorda.UseVisualStyleBackColor = true;
+            this.Discorda.Click += new System.EventHandler(this.dis_clicka); 
             // 
             // drpdownloader
             // 
@@ -192,6 +245,9 @@ namespace DrpFixer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Discorda);
+            this.Controls.Add(this.Utilitys);
+            this.Controls.Add(this.duckduckgob);
             this.Controls.Add(this.Ghostery);
             this.Controls.Add(this.Brave);
             this.Controls.Add(this.Chrome);
@@ -302,13 +358,27 @@ namespace DrpFixer
             client.DownloadFile(url, downloadPath);
         }
 
-        private System.Windows.Forms.Label browsers;
-        private System.Windows.Forms.Label launchers;
-        private System.Windows.Forms.Button Ghostery;
-        private System.Windows.Forms.Button Brave;
-        private System.Windows.Forms.Button Chrome;
 
-
-
+        private void duck_click(object sender,EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://staticcdn.duckduckgo.com/windows-desktop-browser/DuckDuckGo.appinstaller";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadPath = Path.Combine(downfolder, "DuckDGO-Setup.exe");
+            client.DownloadFile(url, downloadPath);
         }
+
+        private void dis_clicka(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://dl.discordapp.net/distro/app/stable/win/x86/1.0.9028/DiscordSetup.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadPath = Path.Combine(downfolder, "Discord-Setup.exe");
+            client.DownloadFile(url, downloadPath);
+        }
+
+
+    }
     }
