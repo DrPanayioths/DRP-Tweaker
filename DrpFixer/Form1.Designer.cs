@@ -43,6 +43,8 @@ namespace DrpFixer
             this.duckduckgob = new System.Windows.Forms.Button();
             this.Utilitys = new System.Windows.Forms.Label();
             this.Discorda = new System.Windows.Forms.Button();
+            this.VS = new System.Windows.Forms.Button();
+            this.VsCode = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -237,7 +239,39 @@ namespace DrpFixer
             this.Discorda.TabIndex = 12;
             this.Discorda.Text = "Discord";
             this.Discorda.UseVisualStyleBackColor = true;
-            this.Discorda.Click += new System.EventHandler(this.dis_clicka); 
+            this.Discorda.Click += new System.EventHandler(this.dis_clicka);
+            // 
+            // VS
+            // 
+            this.VS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.VS.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.VS.FlatAppearance.BorderSize = 2;
+            this.VS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VS.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VS.ForeColor = System.Drawing.Color.DarkCyan;
+            this.VS.Location = new System.Drawing.Point(125, 297);
+            this.VS.Name = "VS";
+            this.VS.Size = new System.Drawing.Size(107, 41);
+            this.VS.TabIndex = 13;
+            this.VS.Text = "Visual Studio";
+            this.VS.UseVisualStyleBackColor = true;
+            this.VS.Click += new System.EventHandler(this.vs_clicka);
+            // 
+            // VsCode
+            // 
+            this.VsCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.VsCode.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.VsCode.FlatAppearance.BorderSize = 2;
+            this.VsCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VsCode.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VsCode.ForeColor = System.Drawing.Color.DarkCyan;
+            this.VsCode.Location = new System.Drawing.Point(238, 297);
+            this.VsCode.Name = "VsCode";
+            this.VsCode.Size = new System.Drawing.Size(107, 41);
+            this.VsCode.TabIndex = 14;
+            this.VsCode.Text = "VS Code";
+            this.VsCode.UseVisualStyleBackColor = true;
+            this.VsCode.Click += new System.EventHandler(this.Vsc_clcik); 
             // 
             // drpdownloader
             // 
@@ -245,6 +279,8 @@ namespace DrpFixer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.VsCode);
+            this.Controls.Add(this.VS);
             this.Controls.Add(this.Discorda);
             this.Controls.Add(this.Utilitys);
             this.Controls.Add(this.duckduckgob);
@@ -275,7 +311,7 @@ namespace DrpFixer
 
 
 
-
+       
 
         private void Epic_Click(object sender, EventArgs e)
         {
@@ -379,6 +415,27 @@ namespace DrpFixer
             client.DownloadFile(url, downloadPath);
         }
 
+        private void Vsc_clcik(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "VScode-Setup");
+            client.DownloadFile(url, downloadpath);
+        }
 
+        private void vs_clicka(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://aka.ms/vs/17/release/vs_community.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "VS-Setup");
+            client.DownloadFile(url, downloadpath);
+        }
+
+        private System.Windows.Forms.Button VS;
+        private System.Windows.Forms.Button VsCode;
     }
     }
