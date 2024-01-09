@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Net;
+using System.ComponentModel;
 using System.Security.Policy;
 
 namespace DrpFixer
@@ -24,6 +25,9 @@ namespace DrpFixer
         private System.Windows.Forms.Button duckduckgob;
         private System.Windows.Forms.Label Utilitys;
         private System.Windows.Forms.Button Discorda;
+        private System.Windows.Forms.Button VS;
+        private System.Windows.Forms.Button VsCode;
+        private System.Windows.Forms.Button powerp;
 
         private void InitializeComponent()
         {
@@ -45,6 +49,7 @@ namespace DrpFixer
             this.Discorda = new System.Windows.Forms.Button();
             this.VS = new System.Windows.Forms.Button();
             this.VsCode = new System.Windows.Forms.Button();
+            this.powerp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -124,7 +129,6 @@ namespace DrpFixer
             this.TheCreator.TabIndex = 4;
             this.TheCreator.Text = "Provided By DrPanayioths";
             this.TheCreator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TheCreator.Click += new System.EventHandler(this.TheCreator_Click);
             // 
             // Ghostery
             // 
@@ -180,7 +184,6 @@ namespace DrpFixer
             this.launchers.Size = new System.Drawing.Size(89, 27);
             this.launchers.TabIndex = 6;
             this.launchers.Text = "Launchers:";
-            this.launchers.Click += new System.EventHandler(this.label2_Click);
             // 
             // Brave
             // 
@@ -271,14 +274,31 @@ namespace DrpFixer
             this.VsCode.TabIndex = 14;
             this.VsCode.Text = "VS Code";
             this.VsCode.UseVisualStyleBackColor = true;
-            this.VsCode.Click += new System.EventHandler(this.Vsc_clcik); 
+            this.VsCode.Click += new System.EventHandler(this.Vsc_clcik);
+            // 
+            // powerp
+            // 
+            this.powerp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.powerp.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.powerp.FlatAppearance.BorderSize = 2;
+            this.powerp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.powerp.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.powerp.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.powerp.Location = new System.Drawing.Point(695, 368);
+            this.powerp.Name = "powerp";
+            this.powerp.Size = new System.Drawing.Size(93, 66);
+            this.powerp.TabIndex = 15;
+            this.powerp.Text = "Ultimate Performance Power";
+            this.powerp.UseVisualStyleBackColor = true;
+            this.powerp.Click += new System.EventHandler(this.dnsrunner_Click);
             // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.powerp);
             this.Controls.Add(this.VsCode);
             this.Controls.Add(this.VS);
             this.Controls.Add(this.Discorda);
@@ -296,7 +316,7 @@ namespace DrpFixer
             this.Controls.Add(this.Epicg);
             this.ForeColor = System.Drawing.Color.Turquoise;
             this.Name = "drpdownloader";
-            this.Opacity = 0.5D;
+            this.Opacity = 0.7D;
             this.ShowIcon = false;
             this.Text = "DRP Downloader (Provided By DrPanayioths)";
             this.TopMost = true;
@@ -435,7 +455,7 @@ namespace DrpFixer
             client.DownloadFile(url, downloadpath);
         }
 
-        private System.Windows.Forms.Button VS;
-        private System.Windows.Forms.Button VsCode;
+        
     }
     }
+
