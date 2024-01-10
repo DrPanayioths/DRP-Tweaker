@@ -50,6 +50,7 @@ namespace DrpFixer
             this.VS = new System.Windows.Forms.Button();
             this.VsCode = new System.Windows.Forms.Button();
             this.powerp = new System.Windows.Forms.Button();
+            this.Mouseopt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -292,12 +293,28 @@ namespace DrpFixer
             this.powerp.UseVisualStyleBackColor = true;
             this.powerp.Click += new System.EventHandler(this.dnsrunner_Click);
             // 
+            // Mouseopt
+            // 
+            this.Mouseopt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Mouseopt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Mouseopt.FlatAppearance.BorderSize = 2;
+            this.Mouseopt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mouseopt.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mouseopt.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.Mouseopt.Location = new System.Drawing.Point(695, 284);
+            this.Mouseopt.Name = "Mouseopt";
+            this.Mouseopt.Size = new System.Drawing.Size(93, 66);
+            this.Mouseopt.TabIndex = 16;
+            this.Mouseopt.Text = "Mouse Optimization";
+            this.Mouseopt.UseVisualStyleBackColor = true;
+            // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Mouseopt);
             this.Controls.Add(this.powerp);
             this.Controls.Add(this.VsCode);
             this.Controls.Add(this.VS);
@@ -455,7 +472,7 @@ namespace DrpFixer
             client.DownloadFile(url, downloadpath);
         }
 
-        
+        private System.Windows.Forms.Button Mouseopt;
     }
     }
 
