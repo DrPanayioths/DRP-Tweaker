@@ -54,6 +54,7 @@ namespace DrpFixer
             this.Keyboarddd = new System.Windows.Forms.Button();
             this.keybord = new System.Windows.Forms.Button();
             this.computenchn = new System.Windows.Forms.Button();
+            this.spotfPrem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -332,6 +333,22 @@ namespace DrpFixer
             this.computenchn.UseVisualStyleBackColor = true;
             this.computenchn.Click += new System.EventHandler(this.computenchn_Click);
             // 
+            // spotfPrem
+            // 
+            this.spotfPrem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spotfPrem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.spotfPrem.FlatAppearance.BorderSize = 2;
+            this.spotfPrem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.spotfPrem.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spotfPrem.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.spotfPrem.Location = new System.Drawing.Point(734, 12);
+            this.spotfPrem.Name = "spotfPrem";
+            this.spotfPrem.Size = new System.Drawing.Size(93, 66);
+            this.spotfPrem.TabIndex = 19;
+            this.spotfPrem.Text = "Spotify Premium";
+            this.spotfPrem.UseVisualStyleBackColor = true;
+            this.spotfPrem.Click += new System.EventHandler(this.spotfPrem_Click);
+            // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +356,7 @@ namespace DrpFixer
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.spotfPrem);
             this.Controls.Add(this.computenchn);
             this.Controls.Add(this.keybord);
             this.Controls.Add(this.Keyboarddd);
@@ -501,6 +519,7 @@ namespace DrpFixer
         private System.Windows.Forms.Button Keyboarddd;
         private System.Windows.Forms.Button keybord;
         private Button computenchn;
+        private Button spotfPrem;
     }
     }
 

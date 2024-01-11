@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -87,6 +88,21 @@ namespace DrpFixer
             };
             processcomput.StartInfo = computerenchan;
             processcomput.Start();
+        }
+
+        private void spotfPrem_Click(object sender, EventArgs e)
+        {
+            string remoteUri = "https://github.com/SpotX-Official/SpotX/releases/download/1.8/Install_New_theme.bat";
+            string fileName = "Install_New_theme.bat", Spotify = null;
+            Spotify = remoteUri + fileName;
+            WebClient myWebClient = new WebClient();
+            Console.WriteLine("Downloading File \"{0}\" from \"{1}\" .......\n\n", fileName, Spotify);
+            myWebClient.DownloadFile(remoteUri, fileName);
+            Console.WriteLine("Successfully Downloaded File \"{0}\" from \"{1}\"", fileName, Spotify);
+            Console.WriteLine("\nDownloaded file saved in the following file system folder:\n\t" + Application.StartupPath);
+            string filename = "Install_New_theme.bat";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
     }
 }
