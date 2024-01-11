@@ -100,10 +100,12 @@ namespace DrpFixer
             myWebClient.DownloadFile(remoteUri, fileName);
             Console.WriteLine("Successfully Downloaded File \"{0}\" from \"{1}\"", fileName, Spotify);
             Console.WriteLine("\nDownloaded file saved in the following file system folder:\n\t" + Application.StartupPath);
+            
             string filename = "Install_New_theme.bat";
             string parameters = $"/k \"{filename}\"";
             Process.Start("cmd", parameters);
         }
+
     }
 }
 

@@ -7,6 +7,7 @@ using System.Security.Policy;
 using System.Windows.Forms.VisualStyles;
 using System.Windows.Forms;
 using System.Reflection.Emit;
+using System.Diagnostics;
 
 namespace DrpFixer
 {
@@ -30,6 +31,13 @@ namespace DrpFixer
         private System.Windows.Forms.Button VS;
         private System.Windows.Forms.Button VsCode;
         private System.Windows.Forms.Button powerp;
+        private System.Windows.Forms.Button Keyboarddd;
+        private System.Windows.Forms.Button keybord;
+        private Button computenchn;
+        private Button spotfPrem;
+        private Button vencord;
+        private System.Windows.Forms.Label label1;
+        private Button scrshots;
 
         private void InitializeComponent()
         {
@@ -55,6 +63,10 @@ namespace DrpFixer
             this.keybord = new System.Windows.Forms.Button();
             this.computenchn = new System.Windows.Forms.Button();
             this.spotfPrem = new System.Windows.Forms.Button();
+            this.vencord = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.scrshots = new System.Windows.Forms.Button();
+            this.Photoshop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -340,7 +352,7 @@ namespace DrpFixer
             this.spotfPrem.FlatAppearance.BorderSize = 2;
             this.spotfPrem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.spotfPrem.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spotfPrem.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.spotfPrem.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.spotfPrem.Location = new System.Drawing.Point(734, 12);
             this.spotfPrem.Name = "spotfPrem";
             this.spotfPrem.Size = new System.Drawing.Size(93, 66);
@@ -349,6 +361,65 @@ namespace DrpFixer
             this.spotfPrem.UseVisualStyleBackColor = true;
             this.spotfPrem.Click += new System.EventHandler(this.spotfPrem_Click);
             // 
+            // vencord
+            // 
+            this.vencord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vencord.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.vencord.FlatAppearance.BorderSize = 2;
+            this.vencord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vencord.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vencord.ForeColor = System.Drawing.Color.DarkCyan;
+            this.vencord.Location = new System.Drawing.Point(342, 356);
+            this.vencord.Name = "vencord";
+            this.vencord.Size = new System.Drawing.Size(107, 41);
+            this.vencord.TabIndex = 20;
+            this.vencord.Text = "Vencord Discord";
+            this.vencord.UseVisualStyleBackColor = true;
+            this.vencord.Click += new System.EventHandler(this.vencord_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(-2, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 27);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Design:";
+            // 
+            // scrshots
+            // 
+            this.scrshots.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrshots.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.scrshots.FlatAppearance.BorderSize = 2;
+            this.scrshots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrshots.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scrshots.ForeColor = System.Drawing.Color.DarkCyan;
+            this.scrshots.Location = new System.Drawing.Point(3, 270);
+            this.scrshots.Name = "scrshots";
+            this.scrshots.Size = new System.Drawing.Size(107, 41);
+            this.scrshots.TabIndex = 22;
+            this.scrshots.Text = "ScreenShots";
+            this.scrshots.UseVisualStyleBackColor = true;
+            this.scrshots.Click += new System.EventHandler(this.scrshots_Click);
+            // 
+            // Photoshop
+            // 
+            this.Photoshop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Photoshop.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Photoshop.FlatAppearance.BorderSize = 2;
+            this.Photoshop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Photoshop.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Photoshop.ForeColor = System.Drawing.Color.DarkCyan;
+            this.Photoshop.Location = new System.Drawing.Point(116, 270);
+            this.Photoshop.Name = "Photoshop";
+            this.Photoshop.Size = new System.Drawing.Size(107, 41);
+            this.Photoshop.TabIndex = 23;
+            this.Photoshop.Text = "Photoshop";
+            this.Photoshop.UseVisualStyleBackColor = true;
+            this.Photoshop.Click += new System.EventHandler(this.Photoshop_Click);
+            // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +427,10 @@ namespace DrpFixer
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.Photoshop);
+            this.Controls.Add(this.scrshots);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.vencord);
             this.Controls.Add(this.spotfPrem);
             this.Controls.Add(this.computenchn);
             this.Controls.Add(this.keybord);
@@ -377,7 +452,7 @@ namespace DrpFixer
             this.Controls.Add(this.Epicg);
             this.ForeColor = System.Drawing.Color.Turquoise;
             this.Name = "drpdownloader";
-            this.Opacity = 0.6D;
+            this.Opacity = 0.65D;
             this.ShowIcon = false;
             this.Text = "DRP Downloader (Provided By DrPanayioths)";
             this.TopMost = true;
@@ -402,6 +477,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "EpicGames-Setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "EpicGames-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
 
@@ -416,6 +495,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Steam-Setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "Steam-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
 
@@ -428,6 +511,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "EA-Setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "EA-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
 
@@ -441,6 +528,9 @@ namespace DrpFixer
             string downloadPath = Path.Combine(downfolder, "LunarClient-Setup.exe");
             client.DownloadFile(url, downloadPath);
 
+            string filename = "LunarClient-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
 
@@ -453,6 +543,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Ghostery-Setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "Ghostery-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
         private void Brave_Click(object sender, EventArgs e)
@@ -463,6 +557,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Brave-setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "Brave-setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
         private void Chrome_click(object sender, EventArgs e)
@@ -473,6 +571,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Chrome-setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "Chrome-setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
 
@@ -484,6 +586,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "DuckDGO-Setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "DuckDGO-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
         private void dis_clicka(object sender, EventArgs e)
@@ -494,6 +600,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Discord-Setup.exe");
             client.DownloadFile(url, downloadPath);
+
+            string filename = "Discord-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
         private void Vsc_clcik(object sender, EventArgs e)
@@ -504,6 +614,10 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadpath = Path.Combine(downfolder, "VScode-Setup");
             client.DownloadFile(url, downloadpath);
+
+            string filename = "VScode-Setup";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
         }
 
         private void vs_clicka(object sender, EventArgs e)
@@ -514,12 +628,55 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadpath = Path.Combine(downfolder, "VS-Setup");
             client.DownloadFile(url, downloadpath);
+
+            string filename = "VS-Setup";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
+        }
+        private void vencord_Click(object sender, EventArgs e)
+        {
+
+        WebClient client = new WebClient();
+        string url = "https://github.com/ArmCord/ArmCord/releases/download/v3.2.5/ArmCord.Setup.3.2.5.exe";
+        string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        downfolder = Path.Combine(downfolder, "Downloads");
+        string downloadpath = Path.Combine(downfolder, "Discord-Setup.exe");
+        client.DownloadFile(url, downloadpath);
+
+        string filename = "Discord-Setup.exe";
+        string parameters = $"/k \"{filename}\"";
+        Process.Start("cmd", parameters);
         }
 
-        private System.Windows.Forms.Button Keyboarddd;
-        private System.Windows.Forms.Button keybord;
-        private Button computenchn;
-        private Button spotfPrem;
+        private void scrshots_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "ScreenShare-Setup.exe");
+            client.DownloadFile(url, downloadpath);
+
+            string filename = "ScreenShare-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
+        }
+
+        private void Photoshop_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Photoshop-Setup.exe");
+            client.DownloadFile(url, downloadpath);
+
+            string filename = "Photoshop-Setup.exe";
+            string parameters = $"/k \"{filename}\"";
+            Process.Start("cmd", parameters);
+        }
+
+        private Button Photoshop;
     }
     }
 
