@@ -38,6 +38,8 @@ namespace DrpFixer
         private Button vencord;
         private System.Windows.Forms.Label label1;
         private Button scrshots;
+        private Button Photoshop;
+
 
         private void InitializeComponent()
         {
@@ -353,7 +355,7 @@ namespace DrpFixer
             this.spotfPrem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.spotfPrem.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spotfPrem.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.spotfPrem.Location = new System.Drawing.Point(734, 12);
+            this.spotfPrem.Location = new System.Drawing.Point(734, 8);
             this.spotfPrem.Name = "spotfPrem";
             this.spotfPrem.Size = new System.Drawing.Size(93, 66);
             this.spotfPrem.TabIndex = 19;
@@ -477,10 +479,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "EpicGames-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "EpicGames-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
 
@@ -495,10 +494,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Steam-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "Steam-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
 
@@ -511,10 +507,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "EA-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "EA-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
 
@@ -527,10 +520,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "LunarClient-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "LunarClient-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
 
@@ -543,10 +533,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Ghostery-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "Ghostery-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
         private void Brave_Click(object sender, EventArgs e)
@@ -557,10 +544,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Brave-setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "Brave-setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
         private void Chrome_click(object sender, EventArgs e)
@@ -571,10 +555,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Chrome-setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "Chrome-setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
 
@@ -586,10 +567,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "DuckDGO-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "DuckDGO-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
         private void dis_clicka(object sender, EventArgs e)
@@ -600,10 +578,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadPath = Path.Combine(downfolder, "Discord-Setup.exe");
             client.DownloadFile(url, downloadPath);
-
-            string filename = "Discord-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadPath);
         }
 
         private void Vsc_clcik(object sender, EventArgs e)
@@ -614,10 +589,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadpath = Path.Combine(downfolder, "VScode-Setup");
             client.DownloadFile(url, downloadpath);
-
-            string filename = "VScode-Setup";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadpath);
         }
 
         private void vs_clicka(object sender, EventArgs e)
@@ -628,10 +600,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadpath = Path.Combine(downfolder, "VS-Setup");
             client.DownloadFile(url, downloadpath);
-
-            string filename = "VS-Setup";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadpath);
         }
         private void vencord_Click(object sender, EventArgs e)
         {
@@ -642,10 +611,7 @@ namespace DrpFixer
         downfolder = Path.Combine(downfolder, "Downloads");
         string downloadpath = Path.Combine(downfolder, "Discord-Setup.exe");
         client.DownloadFile(url, downloadpath);
-
-        string filename = "Discord-Setup.exe";
-        string parameters = $"/k \"{filename}\"";
-        Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadpath);
         }
 
         private void scrshots_Click(object sender, EventArgs e)
@@ -656,10 +622,7 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadpath = Path.Combine(downfolder, "ScreenShare-Setup.exe");
             client.DownloadFile(url, downloadpath);
-
-            string filename = "ScreenShare-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
+            RunDownloadedExecutable(downloadpath);
         }
 
         private void Photoshop_Click(object sender, EventArgs e)
@@ -670,13 +633,18 @@ namespace DrpFixer
             downfolder = Path.Combine(downfolder, "Downloads");
             string downloadpath = Path.Combine(downfolder, "Photoshop-Setup.exe");
             client.DownloadFile(url, downloadpath);
+            RunDownloadedExecutable(downloadpath);
 
-            string filename = "Photoshop-Setup.exe";
-            string parameters = $"/k \"{filename}\"";
-            Process.Start("cmd", parameters);
         }
 
-        private Button Photoshop;
+        private void RunDownloadedExecutable(string executablePath)
+        {
+           ProcessStartInfo startInfo = new ProcessStartInfo();
+           startInfo.FileName = executablePath;
+           Process.Start(startInfo);
+        }
+
+
     }
     }
 
