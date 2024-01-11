@@ -4,6 +4,9 @@ using System.IO;
 using System.Net;
 using System.ComponentModel;
 using System.Security.Policy;
+using System.Windows.Forms.VisualStyles;
+using System.Windows.Forms;
+using System.Reflection.Emit;
 
 namespace DrpFixer
 {
@@ -14,7 +17,6 @@ namespace DrpFixer
         private System.Windows.Forms.Button EA;
         private System.Windows.Forms.Button Lunar;
         private System.ComponentModel.IContainer components;
-        private System.Windows.Forms.Label TheCreator;
         private System.Windows.Forms.ToolTip TipHoverare;
         private System.Windows.Forms.ToolTip RedTip;
         private System.Windows.Forms.Label browsers;
@@ -36,7 +38,6 @@ namespace DrpFixer
             this.Steam = new System.Windows.Forms.Button();
             this.EA = new System.Windows.Forms.Button();
             this.Lunar = new System.Windows.Forms.Button();
-            this.TheCreator = new System.Windows.Forms.Label();
             this.TipHoverare = new System.Windows.Forms.ToolTip(this.components);
             this.Ghostery = new System.Windows.Forms.Button();
             this.RedTip = new System.Windows.Forms.ToolTip(this.components);
@@ -50,7 +51,9 @@ namespace DrpFixer
             this.VS = new System.Windows.Forms.Button();
             this.VsCode = new System.Windows.Forms.Button();
             this.powerp = new System.Windows.Forms.Button();
-            this.Mouseopt = new System.Windows.Forms.Button();
+            this.Keyboarddd = new System.Windows.Forms.Button();
+            this.keybord = new System.Windows.Forms.Button();
+            this.computenchn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -61,7 +64,7 @@ namespace DrpFixer
             this.Epicg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Epicg.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Epicg.ForeColor = System.Drawing.Color.DarkCyan;
-            this.Epicg.Location = new System.Drawing.Point(12, 387);
+            this.Epicg.Location = new System.Drawing.Point(3, 446);
             this.Epicg.Name = "Epicg";
             this.Epicg.Size = new System.Drawing.Size(107, 41);
             this.Epicg.TabIndex = 0;
@@ -77,7 +80,7 @@ namespace DrpFixer
             this.Steam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Steam.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Steam.ForeColor = System.Drawing.Color.DarkCyan;
-            this.Steam.Location = new System.Drawing.Point(125, 387);
+            this.Steam.Location = new System.Drawing.Point(116, 446);
             this.Steam.Name = "Steam";
             this.Steam.Size = new System.Drawing.Size(107, 41);
             this.Steam.TabIndex = 1;
@@ -93,7 +96,7 @@ namespace DrpFixer
             this.EA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EA.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EA.ForeColor = System.Drawing.Color.DarkCyan;
-            this.EA.Location = new System.Drawing.Point(238, 387);
+            this.EA.Location = new System.Drawing.Point(229, 446);
             this.EA.Name = "EA";
             this.EA.Size = new System.Drawing.Size(107, 41);
             this.EA.TabIndex = 2;
@@ -110,7 +113,7 @@ namespace DrpFixer
             this.Lunar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lunar.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lunar.ForeColor = System.Drawing.Color.DarkCyan;
-            this.Lunar.Location = new System.Drawing.Point(351, 387);
+            this.Lunar.Location = new System.Drawing.Point(342, 446);
             this.Lunar.Name = "Lunar";
             this.Lunar.Size = new System.Drawing.Size(107, 41);
             this.Lunar.TabIndex = 3;
@@ -118,18 +121,6 @@ namespace DrpFixer
             this.TipHoverare.SetToolTip(this.Lunar, "By MoonsWorth");
             this.Lunar.UseVisualStyleBackColor = true;
             this.Lunar.Click += new System.EventHandler(this.Lunar_Clicke);
-            // 
-            // TheCreator
-            // 
-            this.TheCreator.AutoSize = true;
-            this.TheCreator.Font = new System.Drawing.Font("Noto Sans Cond", 8F, System.Drawing.FontStyle.Bold);
-            this.TheCreator.ForeColor = System.Drawing.Color.Silver;
-            this.TheCreator.Location = new System.Drawing.Point(678, 437);
-            this.TheCreator.Name = "TheCreator";
-            this.TheCreator.Size = new System.Drawing.Size(127, 15);
-            this.TheCreator.TabIndex = 4;
-            this.TheCreator.Text = "Provided By DrPanayioths";
-            this.TheCreator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ghostery
             // 
@@ -180,7 +171,7 @@ namespace DrpFixer
             this.launchers.AutoSize = true;
             this.launchers.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.launchers.ForeColor = System.Drawing.Color.Black;
-            this.launchers.Location = new System.Drawing.Point(7, 357);
+            this.launchers.Location = new System.Drawing.Point(-2, 416);
             this.launchers.Name = "launchers";
             this.launchers.Size = new System.Drawing.Size(89, 27);
             this.launchers.TabIndex = 6;
@@ -223,7 +214,7 @@ namespace DrpFixer
             this.Utilitys.AutoSize = true;
             this.Utilitys.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Utilitys.ForeColor = System.Drawing.Color.Black;
-            this.Utilitys.Location = new System.Drawing.Point(7, 267);
+            this.Utilitys.Location = new System.Drawing.Point(-2, 326);
             this.Utilitys.Name = "Utilitys";
             this.Utilitys.Size = new System.Drawing.Size(69, 27);
             this.Utilitys.TabIndex = 11;
@@ -237,7 +228,7 @@ namespace DrpFixer
             this.Discorda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Discorda.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Discorda.ForeColor = System.Drawing.Color.DarkCyan;
-            this.Discorda.Location = new System.Drawing.Point(12, 297);
+            this.Discorda.Location = new System.Drawing.Point(3, 356);
             this.Discorda.Name = "Discorda";
             this.Discorda.Size = new System.Drawing.Size(107, 41);
             this.Discorda.TabIndex = 12;
@@ -253,7 +244,7 @@ namespace DrpFixer
             this.VS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VS.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VS.ForeColor = System.Drawing.Color.DarkCyan;
-            this.VS.Location = new System.Drawing.Point(125, 297);
+            this.VS.Location = new System.Drawing.Point(116, 356);
             this.VS.Name = "VS";
             this.VS.Size = new System.Drawing.Size(107, 41);
             this.VS.TabIndex = 13;
@@ -269,7 +260,7 @@ namespace DrpFixer
             this.VsCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VsCode.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VsCode.ForeColor = System.Drawing.Color.DarkCyan;
-            this.VsCode.Location = new System.Drawing.Point(238, 297);
+            this.VsCode.Location = new System.Drawing.Point(229, 356);
             this.VsCode.Name = "VsCode";
             this.VsCode.Size = new System.Drawing.Size(107, 41);
             this.VsCode.TabIndex = 14;
@@ -285,7 +276,7 @@ namespace DrpFixer
             this.powerp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.powerp.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerp.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.powerp.Location = new System.Drawing.Point(695, 368);
+            this.powerp.Location = new System.Drawing.Point(734, 343);
             this.powerp.Name = "powerp";
             this.powerp.Size = new System.Drawing.Size(93, 66);
             this.powerp.TabIndex = 15;
@@ -293,28 +284,64 @@ namespace DrpFixer
             this.powerp.UseVisualStyleBackColor = true;
             this.powerp.Click += new System.EventHandler(this.dnsrunner_Click);
             // 
-            // Mouseopt
+            // Keyboarddd
             // 
-            this.Mouseopt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Mouseopt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Mouseopt.FlatAppearance.BorderSize = 2;
-            this.Mouseopt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mouseopt.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mouseopt.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.Mouseopt.Location = new System.Drawing.Point(695, 284);
-            this.Mouseopt.Name = "Mouseopt";
-            this.Mouseopt.Size = new System.Drawing.Size(93, 66);
-            this.Mouseopt.TabIndex = 16;
-            this.Mouseopt.Text = "Mouse Optimization";
-            this.Mouseopt.UseVisualStyleBackColor = true;
+            this.Keyboarddd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Keyboarddd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Keyboarddd.FlatAppearance.BorderSize = 2;
+            this.Keyboarddd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Keyboarddd.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Keyboarddd.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.Keyboarddd.Location = new System.Drawing.Point(635, 421);
+            this.Keyboarddd.Name = "Keyboarddd";
+            this.Keyboarddd.Size = new System.Drawing.Size(93, 66);
+            this.Keyboarddd.TabIndex = 16;
+            this.Keyboarddd.Text = "Mouse Optimization";
+            this.Keyboarddd.UseVisualStyleBackColor = true;
+            this.Keyboarddd.Click += new System.EventHandler(this.Mouseopt_Click);
+            // 
+            // keybord
+            // 
+            this.keybord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.keybord.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.keybord.FlatAppearance.BorderSize = 2;
+            this.keybord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.keybord.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.keybord.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.keybord.Location = new System.Drawing.Point(734, 421);
+            this.keybord.Name = "keybord";
+            this.keybord.Size = new System.Drawing.Size(93, 66);
+            this.keybord.TabIndex = 17;
+            this.keybord.Text = "Keyboard Optimization";
+            this.keybord.UseVisualStyleBackColor = true;
+            this.keybord.Click += new System.EventHandler(this.keybord_click);
+            // 
+            // computenchn
+            // 
+            this.computenchn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.computenchn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.computenchn.FlatAppearance.BorderSize = 2;
+            this.computenchn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.computenchn.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.computenchn.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.computenchn.Location = new System.Drawing.Point(536, 421);
+            this.computenchn.Name = "computenchn";
+            this.computenchn.Size = new System.Drawing.Size(93, 66);
+            this.computenchn.TabIndex = 18;
+            this.computenchn.Text = "Computer Enchance";
+            this.computenchn.UseVisualStyleBackColor = true;
+            this.computenchn.Click += new System.EventHandler(this.computenchn_Click);
             // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Mouseopt);
+            this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.computenchn);
+            this.Controls.Add(this.keybord);
+            this.Controls.Add(this.Keyboarddd);
             this.Controls.Add(this.powerp);
             this.Controls.Add(this.VsCode);
             this.Controls.Add(this.VS);
@@ -326,14 +353,13 @@ namespace DrpFixer
             this.Controls.Add(this.Chrome);
             this.Controls.Add(this.launchers);
             this.Controls.Add(this.browsers);
-            this.Controls.Add(this.TheCreator);
             this.Controls.Add(this.Lunar);
             this.Controls.Add(this.EA);
             this.Controls.Add(this.Steam);
             this.Controls.Add(this.Epicg);
             this.ForeColor = System.Drawing.Color.Turquoise;
             this.Name = "drpdownloader";
-            this.Opacity = 0.7D;
+            this.Opacity = 0.6D;
             this.ShowIcon = false;
             this.Text = "DRP Downloader (Provided By DrPanayioths)";
             this.TopMost = true;
@@ -472,7 +498,9 @@ namespace DrpFixer
             client.DownloadFile(url, downloadpath);
         }
 
-        private System.Windows.Forms.Button Mouseopt;
+        private System.Windows.Forms.Button Keyboarddd;
+        private System.Windows.Forms.Button keybord;
+        private Button computenchn;
     }
     }
 
