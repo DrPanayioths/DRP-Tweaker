@@ -473,7 +473,6 @@ namespace DrpFixer
             this.Controls.Add(this.Epicg);
             this.ForeColor = System.Drawing.Color.Turquoise;
             this.Name = "drpdownloader";
-            this.Opacity = 0.65D;
             this.ShowIcon = false;
             this.Text = "DRP Tweaker (Provided By DrPanayioths)";
             this.TopMost = true;
@@ -488,7 +487,7 @@ namespace DrpFixer
 
 
 
-       
+
 
         private void Epic_Click(object sender, EventArgs e)
         {
@@ -505,7 +504,7 @@ namespace DrpFixer
 
 
 
-            private void Steam_Clicker(object sender, EventArgs e)
+        private void Steam_Clicker(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
             string url = "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe";
@@ -578,7 +577,7 @@ namespace DrpFixer
         }
 
 
-        private void duck_click(object sender,EventArgs e)
+        private void duck_click(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
             string url = "https://staticcdn.duckduckgo.com/windows-desktop-browser/DuckDuckGo.appinstaller";
@@ -624,12 +623,12 @@ namespace DrpFixer
         private void vencord_Click(object sender, EventArgs e)
         {
 
-        WebClient client = new WebClient();
-        string url = "https://github.com/ArmCord/ArmCord/releases/download/v3.2.5/ArmCord.Setup.3.2.5.exe";
-        string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-        downfolder = Path.Combine(downfolder, "Downloads");
-        string downloadpath = Path.Combine(downfolder, "Discord-Setup.exe");
-        client.DownloadFile(url, downloadpath);
+            WebClient client = new WebClient();
+            string url = "https://github.com/ArmCord/ArmCord/releases/download/v3.2.5/ArmCord.Setup.3.2.5.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Discvencord-Setup.exe");
+            client.DownloadFile(url, downloadpath);
             RunDownloadedExecutable(downloadpath);
         }
 
@@ -658,22 +657,28 @@ namespace DrpFixer
 
         private void RunDownloadedExecutable(string executablePath)
         {
-           ProcessStartInfo startInfo = new ProcessStartInfo();
-           startInfo.FileName = executablePath;
-           Process.Start(startInfo);
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = executablePath;
+            Process.Start(startInfo);
+        }
+
+        private void Runmsi(string executablePath)
+        {
+            Process.Start(executablePath);
         }
 
         private void videdtior_Click(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
-            string url = "https://www.blender.org/download/release/Blender4.0/blender-4.0.2-windows-x64.msi/";
+            string url = "https://mirrors.dotsrc.org/blender/release/Blender4.0/blender-4.0.2-windows-x64.msi";
             string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             downfolder = Path.Combine(downfolder, "Downloads");
-            string downloadpath = Path.Combine(downfolder, "VideoEditor-Setup.exe");
+            string downloadpath = Path.Combine(downfolder, "VideoEdit-Setup.msi");
             client.DownloadFile(url, downloadpath);
-            RunDownloadedExecutable(downloadpath);
-        }
+            Runmsi(downloadpath);
 
+
+        }
     }
-    }
+}
 
