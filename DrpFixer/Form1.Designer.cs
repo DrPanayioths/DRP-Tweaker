@@ -71,6 +71,10 @@ namespace DrpFixer
             this.scrshots = new System.Windows.Forms.Button();
             this.Photoshop = new System.Windows.Forms.Button();
             this.videdtior = new System.Windows.Forms.Button();
+            this.Viber = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Signal = new System.Windows.Forms.Button();
+            this.element = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -440,6 +444,65 @@ namespace DrpFixer
             this.videdtior.UseVisualStyleBackColor = true;
             this.videdtior.Click += new System.EventHandler(this.videdtior_Click);
             // 
+            // Viber
+            // 
+            this.Viber.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Viber.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Viber.FlatAppearance.BorderSize = 2;
+            this.Viber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Viber.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Viber.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Viber.Location = new System.Drawing.Point(116, 186);
+            this.Viber.Name = "Viber";
+            this.Viber.Size = new System.Drawing.Size(107, 41);
+            this.Viber.TabIndex = 28;
+            this.Viber.Text = "Viber";
+            this.Viber.UseVisualStyleBackColor = true;
+            this.Viber.Click += new System.EventHandler(this.Viber_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(-2, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 27);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Communication:";
+            // 
+            // Signal
+            // 
+            this.Signal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Signal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Signal.FlatAppearance.BorderSize = 2;
+            this.Signal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Signal.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Signal.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Signal.Location = new System.Drawing.Point(3, 186);
+            this.Signal.Name = "Signal";
+            this.Signal.Size = new System.Drawing.Size(107, 41);
+            this.Signal.TabIndex = 29;
+            this.Signal.Text = "Signal";
+            this.Signal.UseVisualStyleBackColor = true;
+            this.Signal.Click += new System.EventHandler(this.Signal_Click);
+            // 
+            // element
+            // 
+            this.element.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.element.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.element.FlatAppearance.BorderSize = 2;
+            this.element.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.element.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.element.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.element.Location = new System.Drawing.Point(229, 186);
+            this.element.Name = "element";
+            this.element.Size = new System.Drawing.Size(107, 41);
+            this.element.TabIndex = 30;
+            this.element.Text = "Element";
+            this.element.UseVisualStyleBackColor = true;
+            this.element.Click += new System.EventHandler(this.element_Click);
+            // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,6 +510,10 @@ namespace DrpFixer
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.element);
+            this.Controls.Add(this.Signal);
+            this.Controls.Add(this.Viber);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.videdtior);
             this.Controls.Add(this.Photoshop);
             this.Controls.Add(this.scrshots);
@@ -679,6 +746,11 @@ namespace DrpFixer
 
 
         }
+
+        private Button Viber;
+        private System.Windows.Forms.Label label2;
+        private Button Signal;
+        private Button element;
     }
 }
 

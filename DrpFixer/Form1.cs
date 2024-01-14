@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -106,7 +107,39 @@ namespace DrpFixer
             Process.Start("cmd", parameters);
         }
 
+        private void Viber_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://download.cdn.viber.com/desktop/windows/ViberSetup.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Viber-Setup.msi");
+            client.DownloadFile(url, downloadpath);
+            Runmsi(downloadpath);
 
+        }
+
+        private void Signal_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://updates.signal.org/desktop/signal-desktop-win-6.44.0.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Viber-Setup.msi");
+            client.DownloadFile(url, downloadpath);
+            Runmsi(downloadpath);
+        }
+
+        private void element_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://packages.riot.im/desktop/install/win32/x64/Element%20Setup.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Viber-Setup.msi");
+            client.DownloadFile(url, downloadpath);
+            Runmsi(downloadpath);
+        }
     }
 }
 
