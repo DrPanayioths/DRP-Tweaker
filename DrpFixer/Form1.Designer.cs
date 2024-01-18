@@ -75,6 +75,7 @@ namespace DrpFixer
             this.label2 = new System.Windows.Forms.Label();
             this.Signal = new System.Windows.Forms.Button();
             this.element = new System.Windows.Forms.Button();
+            this.netoptimize = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Epicg
@@ -297,7 +298,7 @@ namespace DrpFixer
             this.powerp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.powerp.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerp.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.powerp.Location = new System.Drawing.Point(734, 343);
+            this.powerp.Location = new System.Drawing.Point(734, 349);
             this.powerp.Name = "powerp";
             this.powerp.Size = new System.Drawing.Size(93, 66);
             this.powerp.TabIndex = 15;
@@ -503,6 +504,21 @@ namespace DrpFixer
             this.element.UseVisualStyleBackColor = true;
             this.element.Click += new System.EventHandler(this.element_Click);
             // 
+            // netoptimize
+            // 
+            this.netoptimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.netoptimize.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.netoptimize.FlatAppearance.BorderSize = 2;
+            this.netoptimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.netoptimize.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.netoptimize.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.netoptimize.Location = new System.Drawing.Point(734, 277);
+            this.netoptimize.Name = "netoptimize";
+            this.netoptimize.Size = new System.Drawing.Size(93, 66);
+            this.netoptimize.TabIndex = 31;
+            this.netoptimize.Text = "Network Optimization";
+            this.netoptimize.UseVisualStyleBackColor = true;
+            // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +526,7 @@ namespace DrpFixer
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.netoptimize);
             this.Controls.Add(this.element);
             this.Controls.Add(this.Signal);
             this.Controls.Add(this.Viber);
@@ -751,6 +768,7 @@ namespace DrpFixer
         private System.Windows.Forms.Label label2;
         private Button Signal;
         private Button element;
+        private Button netoptimize;
     }
 }
 
