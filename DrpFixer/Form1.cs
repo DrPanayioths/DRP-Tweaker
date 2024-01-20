@@ -140,6 +140,42 @@ namespace DrpFixer
             client.DownloadFile(url, downloadpath);
             Runmsi(downloadpath);
         }
+
+        private void netoptimize_Click(object sender, EventArgs e)
+        {
+            var neopt = new Process();
+            var optimizenet = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Verb = "runas",
+                Arguments = "netsh interface tcp set heuristics disabled & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\services\\LanmanServer\\Parameters\" /v \"autodisconnect\" /t REG_DWORD /d \"4294967295\" /f & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\services\\LanmanServer\\Parameters\" /v \"EnableOplocks\" /t REG_DWORD /d \"0\" /f & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\services\\LanmanServer\\Parameters\" /v \"IRPStackSize\" /t REG_DWORD /d \"20\" /f & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\" /v \"TcpTimedWaitDelay\" /t REG_DWORD /d \"30\" /f & \r\nreg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\" /v \"MaxUserPort\" /t REG_DWORD /d \"65534\" /f & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\" /v \"TcpMaxDupAcks\" /t REG_DWORD /d \"2\" /f & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\" /v \"Tcp1323Opts\" /t REG_DWORD /d \"1\" /f & reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\" /v \"DefaultTTL\" /t REG_DWORD /d \"64\" /f & ipconfig /release & ipconfig /renew & ipconfig /flushdns & netsh int ip reset & netsh int ipv4 reset & netsh int ipv6 reset & netsh int tcp reset & netsh winsock reset & netsh advfirewall reset & netsh branchcache reset & netsh http flush logbuffer & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d \"4294967295\" /f"
+            };
+            neopt.StartInfo = optimizenet;
+            neopt.Start();
+        }
+
+        private void avastanti_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://www.avast.com/el-gr/download-thank-you.php?product=FAV-ONLINE-HP&locale=el-gr&direct=1";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Avast-Setup.exe");
+            client.DownloadFile(url, downloadpath);
+            RunDownloadedExecutable(downloadpath);
+        }
+
+        private void bitdefend_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://download.bitdefender.com/windows/installer/en-us/bitdefender_avfree.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Avast-Setup.exe");
+            client.DownloadFile(url, downloadpath);
+            RunDownloadedExecutable(downloadpath);
+
+        }
     }
 }
 

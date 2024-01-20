@@ -76,6 +76,13 @@ namespace DrpFixer
             this.Signal = new System.Windows.Forms.Button();
             this.element = new System.Windows.Forms.Button();
             this.netoptimize = new System.Windows.Forms.Button();
+            this.TitleAntivir = new System.Windows.Forms.Label();
+            this.avastanti = new System.Windows.Forms.Button();
+            this.bitdefend = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Epicg
@@ -85,7 +92,7 @@ namespace DrpFixer
             this.Epicg.FlatAppearance.BorderSize = 2;
             this.Epicg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Epicg.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Epicg.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Epicg.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Epicg.Location = new System.Drawing.Point(3, 446);
             this.Epicg.Name = "Epicg";
             this.Epicg.Size = new System.Drawing.Size(107, 41);
@@ -101,7 +108,7 @@ namespace DrpFixer
             this.Steam.FlatAppearance.BorderSize = 2;
             this.Steam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Steam.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Steam.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Steam.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Steam.Location = new System.Drawing.Point(116, 446);
             this.Steam.Name = "Steam";
             this.Steam.Size = new System.Drawing.Size(107, 41);
@@ -117,7 +124,7 @@ namespace DrpFixer
             this.EA.FlatAppearance.BorderSize = 2;
             this.EA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EA.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EA.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.EA.ForeColor = System.Drawing.Color.DodgerBlue;
             this.EA.Location = new System.Drawing.Point(229, 446);
             this.EA.Name = "EA";
             this.EA.Size = new System.Drawing.Size(107, 41);
@@ -134,7 +141,7 @@ namespace DrpFixer
             this.Lunar.FlatAppearance.BorderSize = 2;
             this.Lunar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lunar.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lunar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Lunar.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Lunar.Location = new System.Drawing.Point(342, 446);
             this.Lunar.Name = "Lunar";
             this.Lunar.Size = new System.Drawing.Size(107, 41);
@@ -152,7 +159,7 @@ namespace DrpFixer
             this.Ghostery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ghostery.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ghostery.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Ghostery.Location = new System.Drawing.Point(238, 48);
+            this.Ghostery.Location = new System.Drawing.Point(229, 27);
             this.Ghostery.Name = "Ghostery";
             this.Ghostery.Size = new System.Drawing.Size(107, 41);
             this.Ghostery.TabIndex = 9;
@@ -168,7 +175,7 @@ namespace DrpFixer
             this.Chrome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Chrome.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chrome.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Chrome.Location = new System.Drawing.Point(12, 48);
+            this.Chrome.Location = new System.Drawing.Point(3, 27);
             this.Chrome.Name = "Chrome";
             this.Chrome.Size = new System.Drawing.Size(107, 41);
             this.Chrome.TabIndex = 7;
@@ -182,7 +189,7 @@ namespace DrpFixer
             this.browsers.AutoSize = true;
             this.browsers.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browsers.ForeColor = System.Drawing.Color.Black;
-            this.browsers.Location = new System.Drawing.Point(7, 18);
+            this.browsers.Location = new System.Drawing.Point(-2, -3);
             this.browsers.Name = "browsers";
             this.browsers.Size = new System.Drawing.Size(78, 27);
             this.browsers.TabIndex = 5;
@@ -207,7 +214,7 @@ namespace DrpFixer
             this.Brave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Brave.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Brave.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Brave.Location = new System.Drawing.Point(125, 48);
+            this.Brave.Location = new System.Drawing.Point(116, 27);
             this.Brave.Name = "Brave";
             this.Brave.Size = new System.Drawing.Size(107, 41);
             this.Brave.TabIndex = 8;
@@ -223,7 +230,7 @@ namespace DrpFixer
             this.duckduckgob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.duckduckgob.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.duckduckgob.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.duckduckgob.Location = new System.Drawing.Point(351, 48);
+            this.duckduckgob.Location = new System.Drawing.Point(342, 27);
             this.duckduckgob.Name = "duckduckgob";
             this.duckduckgob.Size = new System.Drawing.Size(107, 41);
             this.duckduckgob.TabIndex = 10;
@@ -236,7 +243,7 @@ namespace DrpFixer
             this.Utilitys.AutoSize = true;
             this.Utilitys.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Utilitys.ForeColor = System.Drawing.Color.Black;
-            this.Utilitys.Location = new System.Drawing.Point(-2, 326);
+            this.Utilitys.Location = new System.Drawing.Point(-2, 344);
             this.Utilitys.Name = "Utilitys";
             this.Utilitys.Size = new System.Drawing.Size(69, 27);
             this.Utilitys.TabIndex = 11;
@@ -249,8 +256,8 @@ namespace DrpFixer
             this.Discorda.FlatAppearance.BorderSize = 2;
             this.Discorda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Discorda.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discorda.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Discorda.Location = new System.Drawing.Point(3, 356);
+            this.Discorda.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Discorda.Location = new System.Drawing.Point(3, 374);
             this.Discorda.Name = "Discorda";
             this.Discorda.Size = new System.Drawing.Size(107, 41);
             this.Discorda.TabIndex = 12;
@@ -265,8 +272,8 @@ namespace DrpFixer
             this.VS.FlatAppearance.BorderSize = 2;
             this.VS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VS.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VS.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.VS.Location = new System.Drawing.Point(116, 356);
+            this.VS.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.VS.Location = new System.Drawing.Point(116, 374);
             this.VS.Name = "VS";
             this.VS.Size = new System.Drawing.Size(107, 41);
             this.VS.TabIndex = 13;
@@ -281,8 +288,8 @@ namespace DrpFixer
             this.VsCode.FlatAppearance.BorderSize = 2;
             this.VsCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VsCode.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VsCode.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.VsCode.Location = new System.Drawing.Point(229, 356);
+            this.VsCode.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.VsCode.Location = new System.Drawing.Point(229, 374);
             this.VsCode.Name = "VsCode";
             this.VsCode.Size = new System.Drawing.Size(107, 41);
             this.VsCode.TabIndex = 14;
@@ -377,8 +384,8 @@ namespace DrpFixer
             this.vencord.FlatAppearance.BorderSize = 2;
             this.vencord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vencord.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vencord.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.vencord.Location = new System.Drawing.Point(342, 356);
+            this.vencord.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.vencord.Location = new System.Drawing.Point(342, 374);
             this.vencord.Name = "vencord";
             this.vencord.Size = new System.Drawing.Size(107, 41);
             this.vencord.TabIndex = 20;
@@ -389,9 +396,10 @@ namespace DrpFixer
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(-2, 240);
+            this.label1.Location = new System.Drawing.Point(-2, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 27);
             this.label1.TabIndex = 21;
@@ -405,7 +413,7 @@ namespace DrpFixer
             this.scrshots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scrshots.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scrshots.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.scrshots.Location = new System.Drawing.Point(3, 270);
+            this.scrshots.Location = new System.Drawing.Point(3, 101);
             this.scrshots.Name = "scrshots";
             this.scrshots.Size = new System.Drawing.Size(107, 41);
             this.scrshots.TabIndex = 22;
@@ -421,7 +429,7 @@ namespace DrpFixer
             this.Photoshop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Photoshop.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Photoshop.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Photoshop.Location = new System.Drawing.Point(116, 270);
+            this.Photoshop.Location = new System.Drawing.Point(116, 101);
             this.Photoshop.Name = "Photoshop";
             this.Photoshop.Size = new System.Drawing.Size(107, 41);
             this.Photoshop.TabIndex = 23;
@@ -437,7 +445,7 @@ namespace DrpFixer
             this.videdtior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.videdtior.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.videdtior.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.videdtior.Location = new System.Drawing.Point(229, 270);
+            this.videdtior.Location = new System.Drawing.Point(229, 101);
             this.videdtior.Name = "videdtior";
             this.videdtior.Size = new System.Drawing.Size(107, 41);
             this.videdtior.TabIndex = 24;
@@ -452,8 +460,8 @@ namespace DrpFixer
             this.Viber.FlatAppearance.BorderSize = 2;
             this.Viber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Viber.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Viber.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Viber.Location = new System.Drawing.Point(116, 186);
+            this.Viber.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Viber.Location = new System.Drawing.Point(116, 295);
             this.Viber.Name = "Viber";
             this.Viber.Size = new System.Drawing.Size(107, 41);
             this.Viber.TabIndex = 28;
@@ -466,7 +474,7 @@ namespace DrpFixer
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(-2, 156);
+            this.label2.Location = new System.Drawing.Point(-2, 265);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 27);
             this.label2.TabIndex = 25;
@@ -479,8 +487,8 @@ namespace DrpFixer
             this.Signal.FlatAppearance.BorderSize = 2;
             this.Signal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Signal.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Signal.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Signal.Location = new System.Drawing.Point(3, 186);
+            this.Signal.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Signal.Location = new System.Drawing.Point(3, 295);
             this.Signal.Name = "Signal";
             this.Signal.Size = new System.Drawing.Size(107, 41);
             this.Signal.TabIndex = 29;
@@ -495,8 +503,8 @@ namespace DrpFixer
             this.element.FlatAppearance.BorderSize = 2;
             this.element.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.element.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.element.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.element.Location = new System.Drawing.Point(229, 186);
+            this.element.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.element.Location = new System.Drawing.Point(229, 295);
             this.element.Name = "element";
             this.element.Size = new System.Drawing.Size(107, 41);
             this.element.TabIndex = 30;
@@ -518,6 +526,68 @@ namespace DrpFixer
             this.netoptimize.TabIndex = 31;
             this.netoptimize.Text = "Network Optimization";
             this.netoptimize.UseVisualStyleBackColor = true;
+            this.netoptimize.Click += new System.EventHandler(this.netoptimize_Click);
+            // 
+            // TitleAntivir
+            // 
+            this.TitleAntivir.AutoSize = true;
+            this.TitleAntivir.Font = new System.Drawing.Font("Reem Kufi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleAntivir.ForeColor = System.Drawing.Color.Black;
+            this.TitleAntivir.Location = new System.Drawing.Point(-2, 145);
+            this.TitleAntivir.Name = "TitleAntivir";
+            this.TitleAntivir.Size = new System.Drawing.Size(78, 27);
+            this.TitleAntivir.TabIndex = 32;
+            this.TitleAntivir.Text = "Antivirus:";
+            // 
+            // avastanti
+            // 
+            this.avastanti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.avastanti.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.avastanti.FlatAppearance.BorderSize = 2;
+            this.avastanti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avastanti.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avastanti.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.avastanti.Location = new System.Drawing.Point(3, 175);
+            this.avastanti.Name = "avastanti";
+            this.avastanti.Size = new System.Drawing.Size(107, 41);
+            this.avastanti.TabIndex = 33;
+            this.avastanti.Text = "Avast";
+            this.avastanti.UseVisualStyleBackColor = true;
+            this.avastanti.Click += new System.EventHandler(this.avastanti_Click);
+            // 
+            // bitdefend
+            // 
+            this.bitdefend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bitdefend.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bitdefend.FlatAppearance.BorderSize = 2;
+            this.bitdefend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bitdefend.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitdefend.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bitdefend.Location = new System.Drawing.Point(116, 175);
+            this.bitdefend.Name = "bitdefend";
+            this.bitdefend.Size = new System.Drawing.Size(107, 41);
+            this.bitdefend.TabIndex = 34;
+            this.bitdefend.Text = "BitDefender";
+            this.bitdefend.UseVisualStyleBackColor = true;
+            this.bitdefend.Click += new System.EventHandler(this.bitdefend_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 255);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(828, 6);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.Location = new System.Drawing.Point(455, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(6, 492);
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
             // 
             // drpdownloader
             // 
@@ -526,6 +596,11 @@ namespace DrpFixer
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bitdefend);
+            this.Controls.Add(this.avastanti);
+            this.Controls.Add(this.TitleAntivir);
             this.Controls.Add(this.netoptimize);
             this.Controls.Add(this.element);
             this.Controls.Add(this.Signal);
@@ -555,12 +630,14 @@ namespace DrpFixer
             this.Controls.Add(this.EA);
             this.Controls.Add(this.Steam);
             this.Controls.Add(this.Epicg);
-            this.ForeColor = System.Drawing.Color.Turquoise;
+            this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Name = "drpdownloader";
             this.ShowIcon = false;
             this.Text = "DRP Tweaker (Provided By DrPanayioths)";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.drpdownloader_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,6 +846,11 @@ namespace DrpFixer
         private Button Signal;
         private Button element;
         private Button netoptimize;
+        private System.Windows.Forms.Label TitleAntivir;
+        private Button avastanti;
+        private Button bitdefend;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
 
