@@ -81,6 +81,7 @@ namespace DrpFixer
             this.bitdefend = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Aviraa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -589,6 +590,22 @@ namespace DrpFixer
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
             // 
+            // Aviraa
+            // 
+            this.Aviraa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Aviraa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Aviraa.FlatAppearance.BorderSize = 2;
+            this.Aviraa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Aviraa.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aviraa.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Aviraa.Location = new System.Drawing.Point(229, 175);
+            this.Aviraa.Name = "Aviraa";
+            this.Aviraa.Size = new System.Drawing.Size(107, 41);
+            this.Aviraa.TabIndex = 37;
+            this.Aviraa.Text = "Avira";
+            this.Aviraa.UseVisualStyleBackColor = true;
+            this.Aviraa.Click += new System.EventHandler(this.Aviraa_Click);
+            // 
             // drpdownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,6 +613,7 @@ namespace DrpFixer
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(830, 493);
+            this.Controls.Add(this.Aviraa);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bitdefend);
@@ -851,6 +869,7 @@ namespace DrpFixer
         private Button bitdefend;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Button Aviraa;
     }
 }
 

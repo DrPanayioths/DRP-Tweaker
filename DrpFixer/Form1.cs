@@ -171,7 +171,19 @@ namespace DrpFixer
             string url = "https://download.bitdefender.com/windows/installer/en-us/bitdefender_avfree.exe";
             string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             downfolder = Path.Combine(downfolder, "Downloads");
-            string downloadpath = Path.Combine(downfolder, "Avast-Setup.exe");
+            string downloadpath = Path.Combine(downfolder, "BitDefender-Setup.exe");
+            client.DownloadFile(url, downloadpath);
+            RunDownloadedExecutable(downloadpath);
+
+        }
+
+        private void Aviraa_Click(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string url = "https://package.avira.com/download/spotlight-windows-bootstrapper/avira_en_sptl1_eda087091538f108__pcmag.exe";
+            string downfolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downfolder = Path.Combine(downfolder, "Downloads");
+            string downloadpath = Path.Combine(downfolder, "Avira-Setup.exe");
             client.DownloadFile(url, downloadpath);
             RunDownloadedExecutable(downloadpath);
 
