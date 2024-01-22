@@ -188,6 +188,13 @@ namespace DrpFixer
             RunDownloadedExecutable(downloadpath);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form2 form2 = new form2();
+            form2.Show();
+            this.Hide();
+        }
     }
 }
 
