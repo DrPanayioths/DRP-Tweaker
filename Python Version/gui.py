@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import PhotoImage
 from threading import Thread
 from pathlib import Path
+import tempfile
 import requests
 import os
 
@@ -22,8 +23,10 @@ def cloud():
     url = 'https://1111-releases.cloudflareclient.com/win/latest'
     response = requests.get(url, stream=True)
     filename = 'Cloudflare.msi'
-    downloads_path = Path.home() / "Downloads"
-    file_path = downloads_path / filename
+    file_path = Path(tempfile.gettempdir()) / filename
+    
+    d = Path(tempfile.gettempdir())
+    print(f'Downloading {filename} to {d}')
     
     with open(file_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=8192):
@@ -43,7 +46,10 @@ def start_cloudflare():
 ttk.Button(
     start, 
     text="Cloudflare", 
-    command=start_cloudflare
+    command=start_cloudflare,
+    width=20,
+    padding=(10, 20)
+    
 ).pack()
 
 
