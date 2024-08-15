@@ -37,8 +37,45 @@ def start_cloudflare():
     thread = Thread(target=cloud)
     thread.start()
 
+# Malwarebytes
 
+def malwarebytes():
+    url = 'https://downloads.malwarebytes.com/file/mb-windows'
+    response = requests.get(url, stream=True)
+    filename = 'Malwarebytes.exe'
+    file_path = Path(tempfile.gettempdir()) / filename
+    
+    d = Path(tempfile.gettempdir())
+    print(f'Downloading {filename} to {d}')
+    
+    with open(file_path, 'wb') as f:
+        for chunk in response.iter_content(chunk_size=8192):
+         if chunk:
+              f.write(chunk)
 
+def start_malwarebytes():
+    thread = Thread(target=malwarebytes)
+    thread.start()
+
+# Arc Browser
+
+def arc():
+    url = 'https://releases.arc.net/windows/ArcInstaller.exe'
+    response = requests.get(url, stream=True)
+    filename = 'Arc_Installer.exe'
+    file_path = Path(tempfile.gettempdir()) / filename
+    
+    d = Path(tempfile.gettempdir())
+    print(f'Downloading {filename} to {d}')
+    
+    with open(file_path, 'wb') as f:
+        for chunk in response.iter_content(chunk_size=8192):
+         if chunk:
+              f.write(chunk)
+    
+def start_arc():
+    thread = Thread(target=arc)
+    thread.start()
 
 
 
@@ -52,8 +89,22 @@ ttk.Button(
     
 ).pack()
 
+ttk.Button(
+    start,
+    text="Malwarebytes", 
+    command=start_malwarebytes,
+    width=20,
+    padding=(10, 20)
+    
+).pack()
 
-
+ttk.Button(
+    start,
+    text="Arc Browser", 
+    command=start_arc,
+    width=20,
+    padding=(10, 20)
+).pack()
     
 
 
