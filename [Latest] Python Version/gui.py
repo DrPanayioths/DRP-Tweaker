@@ -6,17 +6,23 @@ from pathlib import Path
 import tempfile
 import requests
 import os
+import ctypes
+import sys
 
-
+# Admin Elevation
+def run_as_admin():
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, ' '.join([f'"{arg}"' for arg in sys.argv]), None, 1)
+        sys.exit()
+run_as_admin()
 start = tk.Tk()
 start.geometry('1200x700')
 start.title('')
-
-
 script_path = os.path.abspath(__file__)
 script_dir = os.path.dirname(script_path)
 icon = PhotoImage(file=script_dir + "\drp.png")
 start.iconphoto(False, icon) 
+
 
 # Cloudflare 1.1.1.1
 def cloud():
@@ -32,7 +38,8 @@ def cloud():
         for chunk in response.iter_content(chunk_size=8192):
          if chunk:
               f.write(chunk)
-              
+
+
 def start_cloudflare():
     thread = Thread(target=cloud)
     thread.start()
@@ -45,14 +52,16 @@ def malwarebytes():
     filename = 'Malwarebytes.exe'
     file_path = Path(tempfile.gettempdir()) / filename
     
-    d = Path(tempfile.gettempdir())
-    print(f'Downloading {filename} to {d}')
+    temp = Path(tempfile.gettempdir())
+    print(f'Downloading {filename} to {temp}')
     
     with open(file_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=8192):
          if chunk:
               f.write(chunk)
 
+    
+    
 def start_malwarebytes():
     thread = Thread(target=malwarebytes)
     thread.start()
@@ -65,17 +74,23 @@ def arc():
     filename = 'Arc_Installer.exe'
     file_path = Path(tempfile.gettempdir()) / filename
     
-    d = Path(tempfile.gettempdir())
-    print(f'Downloading {filename} to {d}')
+    temp = Path(tempfile.gettempdir())
+    print(f'Downloading {filename} to {temp}')
     
     with open(file_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=8192):
          if chunk:
               f.write(chunk)
     
+    
 def start_arc():
     thread = Thread(target=arc)
     thread.start()
+
+
+
+
+
 
 
 
