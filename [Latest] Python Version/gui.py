@@ -7,6 +7,7 @@ import tempfile
 import requests
 import os
 import ctypes
+import time
 import sys
 
 # Admin Elevation
@@ -38,6 +39,10 @@ def cloud():
         for chunk in response.iter_content(chunk_size=8192):
          if chunk:
               f.write(chunk)
+    
+    time.sleep(10)
+    os.system(str(file_path))
+    print('Opening {filename}')
 
 
 def start_cloudflare():
@@ -60,7 +65,9 @@ def malwarebytes():
          if chunk:
               f.write(chunk)
 
-    
+    time.sleep(10)
+    os.system(str(file_path))
+    print('Opening {filename}')
     
 def start_malwarebytes():
     thread = Thread(target=malwarebytes)
@@ -82,6 +89,9 @@ def arc():
          if chunk:
               f.write(chunk)
     
+    time.sleep(10)
+    os.system(str(file_path))
+    print('Opening {filename}')
     
 def start_arc():
     thread = Thread(target=arc)
