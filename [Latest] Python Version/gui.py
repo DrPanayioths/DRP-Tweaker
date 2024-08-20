@@ -9,6 +9,7 @@ import os
 import ctypes
 import time
 import sys
+import subprocess
 
 # Admin Elevation
 def run_as_admin():
@@ -40,17 +41,18 @@ def cloud():
          if chunk:
               f.write(chunk)
     
-    time.sleep(10)
-    os.system(str(file_path))
-    print('Opening {filename}')
+    process = subprocess.Popen([str(file_path)], shell=True)
+    process.wait()
+    print(f"Running Cloudflare Installer completed successfully!")
 
-
+    if process.returncode != 0:
+        os.remove(file_path)
 def start_cloudflare():
     thread = Thread(target=cloud)
     thread.start()
 
-# Malwarebytes
 
+# Malwarebytes
 def malwarebytes():
     url = 'https://downloads.malwarebytes.com/file/mb-windows'
     response = requests.get(url, stream=True)
@@ -65,16 +67,21 @@ def malwarebytes():
          if chunk:
               f.write(chunk)
 
-    time.sleep(10)
-    os.system(str(file_path))
-    print('Opening {filename}')
+    process = subprocess.Popen([str(file_path)], shell=True)
+    process.wait()
+    print(f"Running MalwareBytes Installer completed successfully!")
+
+    if process.returncode != 0:
+        os.remove(file_path)
     
 def start_malwarebytes():
     thread = Thread(target=malwarebytes)
     thread.start()
 
-# Arc Browser
 
+
+
+# Arc Browser
 def arc():
     url = 'https://releases.arc.net/windows/ArcInstaller.exe'
     response = requests.get(url, stream=True)
@@ -89,10 +96,13 @@ def arc():
          if chunk:
               f.write(chunk)
     
-    time.sleep(10)
-    os.system(str(file_path))
-    print('Opening {filename}')
+
+    process = subprocess.Popen([str(file_path)], shell=True)
+    process.wait()
+    print(f"Running Arc Installer completed successfully!")
     
+    if process.returncode != 0:
+        os.remove(file_path)
 def start_arc():
     thread = Thread(target=arc)
     thread.start()
