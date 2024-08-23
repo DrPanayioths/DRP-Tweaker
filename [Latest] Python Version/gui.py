@@ -7,7 +7,6 @@ import tempfile
 import requests
 import os
 import ctypes
-import time
 import sys
 import subprocess
 
@@ -111,6 +110,16 @@ def start_arc():
 
 
 
+# Labels
+
+tk.Label(
+    start, 
+    text="Programs", 
+    font=("Arial", 15),
+    width=20,
+    padx=10, 
+    pady=20
+).grid(row=0)
 
 
 
@@ -121,8 +130,7 @@ ttk.Button(
     command=start_cloudflare,
     width=20,
     padding=(10, 20)
-    
-).pack()
+).grid(row=1)
 
 ttk.Button(
     start,
@@ -130,8 +138,7 @@ ttk.Button(
     command=start_malwarebytes,
     width=20,
     padding=(10, 20)
-    
-).pack()
+).grid(row=2)
 
 ttk.Button(
     start,
@@ -139,7 +146,7 @@ ttk.Button(
     command=start_arc,
     width=20,
     padding=(10, 20)
-).pack()
+).grid(row=3)
     
 
 
