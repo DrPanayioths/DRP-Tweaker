@@ -18,6 +18,7 @@ def run_as_admin():
 run_as_admin()
 start = tk.Tk()
 start.geometry('1200x700')
+start.attributes('-alpha', 0.9)
 start.title('')
 script_path = os.path.abspath(__file__)
 script_dir = os.path.dirname(script_path)
@@ -107,8 +108,15 @@ def start_arc():
     thread.start()
 
 
-
-
+# Functions Of Scripts 
+def dns_runner():
+    os.system('"netsh interface ip add dns name="Ethernet" addr=1.1.1.2"')
+    os.system('"netsh interface ip add dns name="Ethernet" addr=1.0.0.2 index=2"')
+    os.system('"netsh interface ipv6 add dnsserver "Ethernet" 2606:4700:4700::1112"')
+    os.system('"ipconfig /flushdns"')
+    
+def win_activate():
+    subprocess.Popen(["powershell.exe", "irm https://get.activated.win | iex"], stdout=sys.stdout)
 
 # Labels
 
@@ -120,6 +128,13 @@ tk.Label(
     padx=10, 
     pady=20
 ).grid(row=0)
+
+tk.Label(
+    start,
+    text="Scripts",
+    font=("Arial", 15),
+    width=20,
+).grid(column=1, row=0)
 
 
 
@@ -148,9 +163,22 @@ ttk.Button(
     padding=(10, 20)
 ).grid(row=3)
     
+# Scripts
+ttk.Button(
+    start,
+    text="Cloudflare DNS",
+    width=20,
+    command=dns_runner,
+    padding=(10, 20)    
+).grid(row=1, column=1)
 
-
-
+ttk.Button(
+    start,
+    text="Activate Win10/11",
+    width=20,
+    command=win_activate,
+    padding=(10, 20)    
+).grid(row=2, column=1)
 
 
 
