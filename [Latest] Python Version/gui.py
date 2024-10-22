@@ -9,6 +9,7 @@ import os
 import ctypes
 import sys
 import subprocess
+from send2trash import send2trash
 
 # Admin Elevation
 def run_as_admin():
@@ -22,7 +23,7 @@ start.attributes('-alpha', 0.9)
 start.title('')
 script_path = os.path.abspath(__file__)
 script_dir = os.path.dirname(script_path)
-icon = PhotoImage(file=script_dir + "\drp.png")
+icon = PhotoImage(file=script_dir + "/drp.png")
 start.iconphoto(False, icon) 
 
 
@@ -118,6 +119,9 @@ def dns_runner():
 def win_activate():
     subprocess.Popen(["powershell.exe", "irm https://get.activated.win | iex"], stdout=sys.stdout)
 
+def perfomance_power():
+    subprocess.run(["powercfg", "/setactive", "e9a42b02-d5df-448d-aa00-03f14749eb61"], check=True)
+
 # Labels
 
 tk.Label(
@@ -179,6 +183,14 @@ ttk.Button(
     command=win_activate,
     padding=(10, 20)    
 ).grid(row=2, column=1)
+
+ttk.Button(
+    start,
+    text="Perfomance Power",
+    width=20,
+    command=perfomance_power,
+    padding=(10, 20)    
+).grid(row=3, column=1)
 
 
 
