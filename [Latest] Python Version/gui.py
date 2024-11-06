@@ -9,7 +9,7 @@ import os
 import ctypes
 import sys
 import subprocess
-from send2trash import send2trash
+import webbrowser
 
 # Admin Elevation
 def run_as_admin():
@@ -18,12 +18,13 @@ def run_as_admin():
         sys.exit()
 run_as_admin()
 start = tk.Tk()
-start.geometry('1200x700')
+start.geometry('480x500')
+start.resizable(False, False)
 start.attributes('-alpha', 0.9)
-start.title('')
+start.title('DRP Tweaker')
 script_path = os.path.abspath(__file__)
 script_dir = os.path.dirname(script_path)
-icon = PhotoImage(file=script_dir + "/drp.png")
+icon = PhotoImage(file=script_dir + "/assets/icon.png")
 start.iconphoto(False, icon) 
 
 
@@ -122,23 +123,26 @@ def win_activate():
 def perfomance_power():
     subprocess.run(["powercfg", "/setactive", "e9a42b02-d5df-448d-aa00-03f14749eb61"], check=True)
 
-# Labels
+# Github Redirection
+github_icon = PhotoImage(file=script_dir + "/assets/github.png")
+github_icon = github_icon.subsample(40, 40)
 
+# Labels
 tk.Label(
     start, 
     text="Programs", 
     font=("Arial", 15),
-    width=20,
-    padx=10, 
+    width=15,
+    padx=5, 
     pady=20
-).grid(row=0)
+).grid(row=0, column=0)
 
 tk.Label(
     start,
     text="Scripts",
     font=("Arial", 15),
-    width=20,
-).grid(column=1, row=0)
+    width=15,
+).grid(column=2, row=0)
 
 
 
@@ -148,7 +152,8 @@ ttk.Button(
     text="Cloudflare", 
     command=start_cloudflare,
     width=20,
-    padding=(10, 20)
+    padding=(10, 20),
+    cursor="hand2",
 ).grid(row=1)
 
 ttk.Button(
@@ -156,7 +161,8 @@ ttk.Button(
     text="Malwarebytes", 
     command=start_malwarebytes,
     width=20,
-    padding=(10, 20)
+    padding=(10, 20),
+    cursor="hand2",
 ).grid(row=2)
 
 ttk.Button(
@@ -164,7 +170,8 @@ ttk.Button(
     text="Arc Browser", 
     command=start_arc,
     width=20,
-    padding=(10, 20)
+    padding=(10, 20),
+    cursor="hand2",
 ).grid(row=3)
     
 # Scripts
@@ -173,25 +180,35 @@ ttk.Button(
     text="Cloudflare DNS",
     width=20,
     command=dns_runner,
-    padding=(10, 20)    
-).grid(row=1, column=1)
+    padding=(10, 20),
+    cursor="hand2",
+).grid(row=1, column=2)
 
 ttk.Button(
     start,
     text="Activate Win10/11",
     width=20,
     command=win_activate,
-    padding=(10, 20)    
-).grid(row=2, column=1)
+    padding=(10, 20),
+    cursor="hand2",
+).grid(row=2, column=2)
 
 ttk.Button(
     start,
     text="Perfomance Power",
     width=20,
     command=perfomance_power,
-    padding=(10, 20)    
-).grid(row=3, column=1)
+    padding=(10, 20),
+    cursor="hand2",
+).grid(row=3, column=2)
 
+github = ttk.Label(
+    start,
+    image=github_icon,
+    cursor="hand2"
+)
+github.bind('<Button-1>', lambda e: webbrowser.open('https://github.com/DrPanayioths/DRP-Tweaker'))
+github.grid(row=0, column=1, padx=40, sticky='nsew')
 
 
 
